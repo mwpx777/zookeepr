@@ -126,6 +126,38 @@
         "hungry"
       ],
       "id": "12"
+    },
+    {
+      "name": "",
+      "species": "",
+      "diet": "herbivore",
+      "personalityTraits": [],
+      "id": "13"
+    },
+    {
+      "name": "",
+      "species": "",
+      "diet": "herbivore",
+      "personalityTraits": [],
+      "id": "14"
+    },
+    {
+      "name": "Jeff",
+      "species": "Monkey",
+      "diet": "folivore",
+      "personalityTraits": [],
+      "id": "15"
+    },
+    {
+      "name": "Jeff",
+      "species": "Monkey",
+      "diet": "folivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious"
+      ],
+      "id": "16"
     }
   ]
 }

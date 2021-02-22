@@ -19,6 +19,10 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
+// this will allow server to access and display all files in 'public' folder.  This will allow the files in the folder to become static resources
+app.use(express.static('public'));
+
+
 // get is a method that requires 2 arguments
 // first is string that describes the route the client will have to fetch from
 // second is callback function that will execute every time route is accessed with GET request
@@ -134,7 +138,23 @@ app.post('/api/animals', (req, res) => {
     res.json(animal);
 });
 
+//  '/' points to the root route of the server 
+// this is route used to create a homepage for a server
+// this method will respond with HTML page to display in browser
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.get('/animals', (req, res) =>{
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+app.get('/zookeepers', (req,res) =>{
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
 // listen for requests
+// this should always be last on the page
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
