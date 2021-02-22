@@ -83,7 +83,7 @@ function createNewAnimal(body, animalsArray) {
     // this will write animals.json file in the data subdirectory 
     fs.writeFileSync(
         path.join(__dirname, './data/animals.json'),
-        // null means dont edit any info in the array, 2 just adds whitespace to the array to read easier
+        // null means dont edit any info in the existing array, 2 just adds whitespace to the array to read easier
         JSON.stringify({animals: animalsArray} , null, 2)
     );
    
