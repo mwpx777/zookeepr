@@ -4,7 +4,7 @@
 // instantiate the server
 
 const express = require('express');
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 const app = express();
 const fs = require('fs');
 const path = require('path');
